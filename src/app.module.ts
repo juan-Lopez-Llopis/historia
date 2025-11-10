@@ -9,7 +9,7 @@ import { PersonajeModule } from './personaje/personaje.module';
 import { FechaModule } from './fecha/fecha.module';
 import { PactoModule } from './pacto/pacto.module';
 import { QuizzModule } from './quizz/quizz.module';
-import 'dotenv/config';
+
 
 @Module({
   imports: [
