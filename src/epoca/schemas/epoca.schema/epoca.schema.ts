@@ -1,1 +1,5 @@
-export class EpocaSchema {}
+import { Schema } from "mongoose";
+
+export const EpocaSchema = new Schema({
+    nombre: {type: String, required: true},
+})
