@@ -1,13 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>personajes</ion-title>
+<ion-header >
+  <ion-toolbar class="header-color">
+    <ion-buttons>
+      <ion-back-button defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-title ion-text-center">personajes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">personajes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-toolbar class=" searchbar">
+    <ion-searchbar placeholder="Buscar personaje" (ionInput)="buscar($event)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-list>
+    @for (char of characterVisible; track char._id) {
+      <ion-item [routerLink]="'/personaje-detalle/' + char._id">
+        <ion-avatar slot="start">
+          <ion-img [src]="char.image"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <b>{{char.nombre}} </b>
+          <ion-text style="font-size: x-small;">(<b>{{char.lugar_nacimiento}}</b>: {{char.fecha_nacimiento}}/<b>{{char.lugar_muerte}}</b>: {{char.fecha_muerte}})</ion-text>
+        </ion-label>
+        <ion-text style="color: brown;">{{char.epoca.nombre}}</ion-text>
+      </ion-item>
+    }
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

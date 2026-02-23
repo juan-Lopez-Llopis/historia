@@ -12,7 +12,7 @@ export interface Pact {
     _id: string;
     nombre: string;
     descripcion: string;
-    fecha: Date;
+    fecha: string;
     lugar: string;
     firmantes: string[];
     epoca: string | Time

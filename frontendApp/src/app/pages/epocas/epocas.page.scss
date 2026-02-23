@@ -1,0 +1,25 @@
+.header-color {
+    color: lightgray;
+    --background: rgb(2, 2, 58);
+}
+.content-color {
+    --background:rgb(2, 2, 58);
+}
+.full-card{
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.epoca-card {
+  height: 180px;
+  margin: 16px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+}

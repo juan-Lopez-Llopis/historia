@@ -1,0 +1,92 @@
+.header-color {
+    color: lightgray;
+    --background: rgb(2, 2, 58);
+}
+.content-color {
+    --background:rgb(2, 2, 58);
+}
+.principal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+.swiper-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 20px;
+    min-height: 100px;
+}
+.full-card{
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.swiper-buttons {
+margin: 10px 0;
+}
+.ion-range-container {
+    width: 90%;
+    margin: 20px 0 0 0;
+}
+swiper-container {
+    width: 100%;
+}
+swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.button {
+    margin-right: 5px;
+    --background: rgb(2, 2, 58);
+}
+.mapa-container {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.mapa-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.timeline-container {
+    width: 100%;          /* contenedor ocupa todo el ancho */
+  max-width: 300px;     /* opcional: limitar ancho */
+  margin: 40px auto 5px auto; /* centra y ajusta espacio arriba/abajo */
+  text-align: center;
+}
+.timeline-label {
+      font-weight: bold;
+  font-size: 20px;
+  margin-top: -16px;
+  margin-bottom: 5px;  /* pega el año al slider */
+}
+.timeline-range {
+    --bar-background: #ccc;          /* opcional: color de la barra */
+  --bar-height: 6px;               /* grosor de la barra */
+  --knob-size: 24px;                /* tamaño del thumb */
+  --padding-start: 0;               /* quita padding interno */
+  --padding-end: 0;
+  --ion-range-knob-color: #3880ff; /* color del knob */
+}

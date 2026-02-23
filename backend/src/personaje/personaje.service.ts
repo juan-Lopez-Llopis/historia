@@ -13,7 +13,7 @@ export class PersonajeService {
         return personaje.save();
     }
     async getPersonajes(): Promise<Personaje[]> {
-        return this.personajeModel.find();
+        return this.personajeModel.find().populate('epoca').exec();
     }
     async getPersonaje(id: string): Promise<any> {
         return this.personajeModel.findById(id);

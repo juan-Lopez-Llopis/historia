@@ -12,6 +12,6 @@ export interface Fecha {
     _id?: string;
     titulo: string;
     descripcion: string;
-    fecha: Date;
+    fecha: string;
     epoca: string | Time
 }

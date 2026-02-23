@@ -35,7 +35,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/localizacion/localizacion.page').then( m => m.LocalizacionPage)
   },
   {
-    path: 'epoca-detalle',
+    path: 'epoca-detalle/:id',
     loadComponent: () => import('./pages/epoca-detalle/epoca-detalle.page').then( m => m.EpocaDetallePage)
+  },
+  {
+    path: 'personaje-detalle/:id',
+    loadComponent: () => import('./pages/personaje-detalle/personaje-detalle.page').then( m => m.PersonajeDetallePage)
   },
 ];

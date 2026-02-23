@@ -1,7 +1,7 @@
 {
   "name": "frontendApp",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "JuanLopez",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -29,6 +29,7 @@
     "@ionic/angular": "^8.0.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
+    "swiper": "^12.0.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

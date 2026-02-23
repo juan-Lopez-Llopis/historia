@@ -128,7 +128,7 @@ export class BatallaController {
         }
     }
 
-    @Get('paginated')
+    @Get('/paginated')
     async getBattlesPaginated(@Query()paginationDto: PaginationDto) {
         try {
             const page = paginationDto.page ?? 1;

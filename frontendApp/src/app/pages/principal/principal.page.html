@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>principal</ion-title>
+<ion-header >
+  <ion-toolbar class="header-color">
+    <ion-title class="ion-title ion-text-center">principal</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">principal</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content-color principal-content">
+  <ion-card color="light" class="full-card">
+    <div class="top-section">
+      <div class="mapa-container">
+         <img [src]="epocas[indiceActual].mapa" alt="Mapa histórico">
+      </div>
+            <div class="timeline-container">
+               <div class="timeline-label">
+                <ion-row >
+                  <ion-col>
+                    {{epocas[indiceActual].anyo}}
+                  </ion-col>
+                </ion-row>
+              {{epocas[indiceActual].epoca}}
+            </div>
+            <ion-range class="timelime-range" min="0" [max]="epocas.length - 1" step="1" [(ngModel)]="indiceActual"></ion-range>
+            </div>    
+    </div>
+    
+    <div class="swiper-section">
+      <swiper-container [slidesPerView]="3.5"
+                        [separator]="3" class="swiper-buttons">
+        @for (sec of secciones; track $index) {
+          <swiper-slide >
+              <ion-button class="button" expand="block"
+                          size="medium"
+                          (click)="navegar(sec.route)"
+              >{{sec.label}}</ion-button>
+          </swiper-slide>
+        }
+                      
+      </swiper-container>
+    </div>
+      
+   
+
+
+  </ion-card>
 </ion-content>

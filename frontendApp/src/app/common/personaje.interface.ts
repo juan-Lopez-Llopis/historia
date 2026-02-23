@@ -17,5 +17,5 @@ export interface Character {
     fecha_muerte: string;
     lugar_nacimiento: string;
     lugar_muerte: string;
-    epoca: string | Time;
+    epoca:  Time;
 }

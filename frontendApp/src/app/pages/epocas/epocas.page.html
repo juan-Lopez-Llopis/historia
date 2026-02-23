@@ -1,13 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>epocas</ion-title>
+<ion-header >
+  <ion-toolbar class="header-color">
+    <ion-buttons>
+      <ion-back-button defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-title ion-text-center">Epocas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">epocas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content-color">
+ 
+  <ion-list>
+    @for (time of epocas; track time._id) {
+      <ion-card-title class="ion-text-center">
+                <h1><b>{{time.nombre}}</b></h1>
+          </ion-card-title> 
+      <ion-card class="epoca-card"
+                button
+                (click)="goToDetalle(time._id)">
+                <img [src]="time.imagen?.[0]" alt="image-epoca">
+
+             
+      </ion-card>
+    }
+      
+  </ion-list>
+
+    
+
+ 
 </ion-content>

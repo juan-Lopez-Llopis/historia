@@ -5,6 +5,7 @@ export const EpocaSchema = new Schema({
     descripcion: {type: String, required: true},
     fecha_inicio: {type: String, required: true},
     fecha_fin: {type: String, required: true},
+    
     imagen: [{type: String, required: false}],
     etapa: [{
         nombre:{ type: String, required: true},
@@ -13,5 +14,6 @@ export const EpocaSchema = new Schema({
         fecha_fin: {type: String, required: true},
         descripcion: {type: String, required: true},
 
-    }]
+    }],
+    orden: {type: Number, required: true}
 }, {versionKey:false, timestamps: true})

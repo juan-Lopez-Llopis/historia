@@ -1,0 +1,17 @@
+<ion-header >
+  <ion-toolbar class="header-color">
+    <ion-buttons>
+      <ion-back-button defaultHref="/personajes" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-title ion-text-center">Detalle de personaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  @if(character) {
+    <ion-card>
+      <ion-card-title class="ion-text-center ion-text-capitalize"><h2><b>{{character.nombre}}</b></h2></ion-card-title>  
+      <ion-img [src]="character.image"></ion-img>
+    </ion-card>
+  }
+</ion-content>

@@ -13,7 +13,8 @@ export class EpocaService {
         return epoca.save();
     }
     async getEpocas(): Promise<Epoca[]> {
-        return this.epocaModel.find();
+        return this.epocaModel.find()
+                               .sort({orden: 1}) ;
     }
     async getEpoca(id: string): Promise<any> {
         return this.epocaModel.findById(id);
