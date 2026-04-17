@@ -1,13 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>epocaDetalle</ion-title>
+<ion-header >
+  <ion-toolbar class="header-color">
+    <ion-buttons>
+      <ion-back-button defaultHref="/epocas" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-title ion-text-center">epocaDetalle</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">epocaDetalle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  @if(epoca) {
+    <ion-card>
+      <ion-card-title class="ion-text-center ion-text-capitalize"><h2><b>{{epoca.nombre}}</b></h2></ion-card-title>
+      <p class="ion-text-center">{{epoca.descripcion}}</p>
+      <ion-card-content>
+         @for (etapa of etapas; track etapa._id) {
+          <h2 class="ion-title ion-text-center"><b>{{etapa.nombre}} </b></h2>
+          <h3 class="ion-text-center">{{etapa.fecha_inicio}} / {{etapa.fecha_fin}}</h3>
+          <ion-img [src]="etapa.imagen"></ion-img>
+            <p>{{etapa.descripcion}}</p>
+         }
+      </ion-card-content>
+        
+    </ion-card>
+  }
 </ion-content>

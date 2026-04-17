@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonList, IonItem, IonAvatar, IonImg, IonLabel, IonText, IonSearchbar, IonInfiniteScroll, IonInfiniteScrollContent, InfiniteScrollCustomEvent } from '@ionic/angular/standalone';
 import { PersonajeService } from 'src/app/services/personaje.service';
-import { Router, RouterLinkActive } from '@angular/router';
+import { Router} from '@angular/router';
 import { ToastService } from 'src/app/services/toast.service';
 import { Character, CharacterInterface } from 'src/app/common/personaje.interface';
 import { RouterLink } from '@angular/router';
