@@ -56,6 +56,7 @@ export class PersonajesPage implements OnInit {
         next: value => {
           console.log(value)
           this.character = value;
+          this.characterVisible = [...this.character]
         },
         error: err => {
           this.toastService.mostrarToast(err.message, 'danger', 'bottom')

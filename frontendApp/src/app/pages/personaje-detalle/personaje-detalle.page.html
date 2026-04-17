@@ -10,8 +10,13 @@
 <ion-content>
   @if(character) {
     <ion-card>
-      <ion-card-title class="ion-text-center ion-text-capitalize"><h2><b>{{character.nombre}}</b></h2></ion-card-title>  
-      <ion-img [src]="character.image"></ion-img>
+      <ion-card-title class="ion-text-center ion-text-capitalize"><h2><b>{{character.nombre}}</b></h2></ion-card-title> 
+      <p class="ion-text-center"><b>{{character.fecha_nacimiento}}, {{character.lugar_nacimiento}}/{{character.fecha_muerte}}, {{character.lugar_muerte}} </b></p> 
+      <ion-img class="img-option " [src]="character.image"></ion-img>
+      <ion-card-content>
+        <ion-text class="text-char">{{character.biografia}}</ion-text>
+      </ion-card-content>
+      
     </ion-card>
   }
 </ion-content>

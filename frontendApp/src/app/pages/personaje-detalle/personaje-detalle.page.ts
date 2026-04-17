@@ -1,7 +1,7 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonCard, IonCardTitle, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonCard, IonCardTitle, IonImg, IonText, IonCardContent } from '@ionic/angular/standalone';
 import { PersonajeService } from 'src/app/services/personaje.service';
 import { Character, OneCharacter } from 'src/app/common/personaje.interface';
 import { ToastService } from 'src/app/services/toast.service';
@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './personaje-detalle.page.html',
   styleUrls: ['./personaje-detalle.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonCard, IonCardTitle, IonImg]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonCard, IonCardTitle, IonImg, IonText, IonCardContent]
 })
 export class PersonajeDetallePage implements OnInit {
   private route = inject(ActivatedRoute);
